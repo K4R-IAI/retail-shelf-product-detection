@@ -3,28 +3,9 @@ import os
 from pathlib import Path
 import csv
 from collections import defaultdict
-from tqdm import tqdm 
+from tqdm import tqdm
 
-# train_0.jpg,208,537,422,814,object,3024,3024
-# test_0.jpg,120,2527,225,2764,object,2448,3264
-# val_0.jpg,5,1429,219,1612,object,2336,4160
-
-IMAGES_PATH = Path(os.path.join("input", "images"))
-TRAIN_CSV_READER = csv.reader(open(Path(os.path.join("input", "annotations", "annotations_train.csv"))))
-TEST_CSV_READER = csv.reader(open(Path(os.path.join("input", "annotations", "annotations_test.csv"))))
-VAL_CSV_READER = csv.reader(open(Path(os.path.join("input", "annotations", "annotations_val.csv"))))
-CLASSES = ["object"]
-
-OUTPUT_PATH = Path("data")
-YOLO_IMAGES_PATH = OUTPUT_PATH / "images"
-YOLO_TRAIN_IMAGES_PATH = YOLO_IMAGES_PATH / "train"
-YOLO_TEST_IMAGES_PATH = YOLO_IMAGES_PATH / "test"
-YOLO_VAL_IMAGES_PATH = YOLO_IMAGES_PATH / "val"
-
-YOLO_LABELS_PATH = OUTPUT_PATH / "labels"
-YOLO_TRAIN_LABELS_PATH = YOLO_LABELS_PATH / "train"
-YOLO_TEST_LABELS_PATH = YOLO_LABELS_PATH / "test"
-YOLO_VAL_LABELS_PATH = YOLO_LABELS_PATH / "val"
+from src.constants import IMAGES_PATH, OUTPUT_PATH, TEST_CSV_READER, TRAIN_CSV_READER, VAL_CSV_READER, YOLO_TEST_IMAGES_PATH, YOLO_TEST_LABELS_PATH, YOLO_TRAIN_IMAGES_PATH, YOLO_TRAIN_LABELS_PATH, YOLO_VAL_IMAGES_PATH, YOLO_VAL_LABELS_PATH 
 
 if os.path.exists(OUTPUT_PATH):
     shutil.rmtree(OUTPUT_PATH)
