@@ -1,0 +1,8 @@
+[core]
+    remote = minio
+    autostage = true
+['remote "minio"']
+    url = s3://retail-shelf-dataset
+    endpointurl = http://impro.umwelt-campus.de:9000
+    access_key_id = ROOTNAME
+    secret_access_key = CHANGEME123

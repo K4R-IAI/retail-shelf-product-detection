@@ -1,0 +1,24 @@
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - data/
+    - src/train.py
+    params:
+    - train.epochs
+    - train.image_size
+    - train.pretrained_weights
+    outs:
+    - training/
+
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+      - prepared/
+      - training/
+    metrics:
+      - pascal.json:
+          cache: false
+    outs:
+      - evaluation/
+

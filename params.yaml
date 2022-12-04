@@ -1,0 +1,5 @@
+train:
+  epochs: 10
+  image_size: 1280
+  pretrained_weights: yolov5m6.pt
+  no_mosaic: true

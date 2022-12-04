@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+jupyter = "*"
+opencv-python = "*"
+dvc = {extras = ["s3"], version = "*"}
+yolov5 = "*"
+globox = "*"
+object-detection-metrics = {git = "https://github.com/christophbrosch/review_object_detection_metrics.git"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
