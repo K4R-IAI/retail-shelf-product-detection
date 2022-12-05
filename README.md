@@ -8,7 +8,7 @@ Beim ersten Ausführen von `python src/training` wird eine Fehlermeldung ausgewo
 Beschreibung für das Annotationsformat: https://roboflow.com/formats/yolov5-pytorch-txt.
 
 # Beispiel
-Nach einem Training von 10 Epochen liefert das Modell bereit ein zeigbares Ergebnis. Die Bounding Boxen sind noch merkwürdig skaliert und sollen eigentlich das gesamte Produkt umfassen.
+Nach einem Training von 10 Epochen liefert das Modell bereit ein zeigbares Ergebnis. Die Bounding Boxen sind noch merkwürdig skaliert und sollen eigentlich das gesamte Produkt umfassen. Im `/docs` Ordner sind weiter gut funktionierende Besipiele.
 ### input
 ![](docs/input.jpg)
 ### input + detections

@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/
+      md5: 4aa414d1b9d2f5530c7529688eb81f38.dir
+      size: 6844962940
+      nfiles: 23489
+    - path: src/train.py
+      md5: 4189cd9043106cf79b56e14c6b6679c5
+      size: 380
+    params:
+      params.yaml:
+        train.epochs: 25
+        train.image_size: 1280
+        train.pretrained_weights: yolov5m6.pt
+    outs:
+    - path: training/
+      md5: c9a989574146eae055df44a682ba5f42.dir
+      size: 152608641
+      nfiles: 24

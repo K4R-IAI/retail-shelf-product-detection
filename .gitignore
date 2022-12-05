@@ -2,4 +2,8 @@
 /data
 /visualization
 /training
-yolov5m6.pt
+/runs
+/retaillab
+
+nohup.out
+yolov*.pt
