@@ -21,8 +21,8 @@ def annotate_image(image, label):
     bboxes = Path(label).read_text().split("\n")
     for bbox in bboxes:
         x, y, width, height = [float(n) for n in bbox.split()[1:]]
-        x, width = x * og_width, width * og_width
-        y, height = y * og_height, height * og_height
+        x, width = x * og_width, (width / 2) * og_width
+        y, height = y * og_height, (height / 2) * og_height
         x, y, width, height = int(x), int(y), int(width), int(height)
         cv2.rectangle(image, (x - width, y - height), (x + width, y + height), color=(255, 0, 0), thickness=5)
     return image

@@ -30,8 +30,8 @@ def convert_row(row):
     image, xmin, ymin, xmax, ymax, _, width, height = row
     x = (int(xmin) + int(xmax)) / 2
     y = (int(ymin) + int(ymax)) / 2
-    _width = (x - int(xmin))
-    _height = (y - int(ymin)) 
+    _width = (int(xmax) - int(xmin))
+    _height = (int(ymax) - int(ymin)) 
     x_rel = x / int(width)
     y_rel = y / int(height)
     width_rel = _width / int(width)
