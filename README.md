@@ -3,3 +3,10 @@ Für das Training verwende ich den SKU110k Datensatz, dieser kann unter folgende
 
 # Fehlermeldung
 Beim ersten Ausführen von `python src/training` wird eine Fehlermeldung ausgeworfen, welche besagt das der Datensatz nicht gefunden werden kann. Um die Fehlermeldung zu beheben muss eine Abschnitt im Quellcode den Yolov5-pip Pakets entfernt werden. Der folgende Abschnitt muss entfernt werden: https://github.com/fcakyon/yolov5-pip/pull/151/files.
+
+# Beispiel
+Nach einem Training von 10 Epochen liefert das Modell bereit ein zeigbares Ergebnis. Die Bounding Boxen sind noch merkwürdig skaliert und sollen eigentlich das gesamte Produkt umfassen.
+### input
+![](docs/input.jpg)
+### input + detections
+![](docs/detections.jpg)
