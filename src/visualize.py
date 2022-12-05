@@ -17,7 +17,6 @@ labels = sorted(YOLO_TRAIN_LABELS_PATH.glob("*"))[:N_VISUALIZATION]
 def annotate_image(image, label):
     image = str(image)
     image = cv2.imread(image, cv2.IMREAD_COLOR)
-    print(image.shape)
     og_height, og_width = image.shape[:2]
     bboxes = Path(label).read_text().split("\n")
     for bbox in bboxes:
